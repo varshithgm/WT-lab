@@ -1,168 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <style>
-            table, th, td {
-                border-color: black;
-                border: width 1px; ;
-                padding: 0.5rem;
-                padding-top: 1rem;
-                padding-bottom: 1 rem;
-  border: 1px solid;
-}
-  #tea{
-   background-color: cadetblue;
-  }
-  #coff{
-    background-color: antiquewhite;
 
-  }
-    #jj{
-    background-color: rgb(215, 250, 238);
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  }
-    .oddrow{
-    background-color: rgb(19, 192, 236);
+    <title>Class Timetable</title>
 
-  }
-  
-    .ev{
-    background-color: rgb(19, 192, 236);
+    <style>
+        * { box-sizing: border-box; }
+        @page { size: A4 landscape; margin: 8mm; }
+        body { font-family: Arial, sans-serif; background-color: #eef4f8; color: #1e293b; margin: 10px; }
+        .heading { text-align: center; background-color: #173f5f; color: white; padding: 10px; margin-bottom: 10px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); }
+        .heading h2 { margin: 2px; font-size: 18px; }
+        .heading h3 { margin: 3px; font-size: 13px; color: #d9f3ff; }
+        .heading p { margin: 3px; font-size: 10px; color: #e2e8f0; }
+        table { border-collapse: collapse; width: 100%; table-layout: fixed; background-color: white; border-radius: 6px; overflow: hidden; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.10); }
+        th, td { border: 1px solid #64748b; padding: 4px 2px; text-align: center; font-size: 9px; line-height: 1.15; height: 25px; }
+        th { background-color: #2563eb; color: white; font-weight: bold; font-size: 9px; }
+        .mon, .wed, .fri { background-color: #dbeafe; }
+        .tue, .thur, .sat { background-color: #ede9fe; }
+        .break { background-color: #fef3c7; color: #d18d62; font-weight: bold; writing-mode: vertical-rl; transform: rotate(180deg); letter-spacing: 1px; }
+        .mini_proj { background-color: #572603; color: white; font-weight: bold; }
+        .mon td:first-child, .tue td:first-child, .wed td:first-child, .thur td:first-child, .fri td:first-child, .sat td:first-child { font-weight: bold; color: #173f5f; font-size: 10px; }
+        .subject-table { margin-top: 8px; }
+        .subject-table th, .subject-table td { height: 22px; padding: 4px; font-size: 9px; }
+        .subject-table th { background-color: #173f5f; }
+        .subject-table tr:nth-child(even) { background-color: #f1f5f9; }
+        .subject-table tr:nth-child(odd) { background-color: #ffffff; }
+        td:hover { background-color: #bae6fd; transition: 0.2s; }
+        .mini_proj:hover { background-color: #ea580c; }
+        .break:hover { background-color: #fde68a; }
+        @media print {
+            html, body { width: 100%; height: 100%; }
+            body { margin: 0; padding: 0; background: white; }
+            .heading, table { box-shadow: none; }
+            td:hover, .mini_proj:hover, .break:hover { background-color: inherit; }
+        }
+    </style>
+</head>
 
-  }
-      .rv{
-    background-color: rgb(19, 192, 236);
+<body>
+    <div class="heading">
+        <h2>BANGALORE INSTITUTE OF TECHNOLOGY</h2>
+        <h3>DEPARTMENT OF CSE</h3>
+        <h3>TIME TABLE FOR THE YEAR - SEP 2026 - 27</h3>
+        <p>V Sem, D Section, Academic Year 2026-27</p>
+    </div>
 
-  }
-    
-      .vv{
-    background-color: rgb(19, 192, 236);
-
-  }
-    
-      .ll{
-    background-color: rgb(19, 192, 236);
-
-  }
-  
-      .lunch{
-    background-color: rgb(19, 192, 236);
-
-  }
-    
-      .ji{
-    background-color: rgb(0, 216, 216);
-
-  }
-   
-      #io{
-    background-color: rgb(0, 184, 71);
-
-  }
-   
-    
-    
-    
-    
-        </style>
-         <title>Timetable</title>
-    </head>
-    <body>
-         <h1>time table </h1>
-       <table>
-  <tr>
-    <th>Day/Time</th>
-    <th>8:00AM-9:00AM</th>
-        <th>9:00AM-10:00AM</th>
-            <th>10:00AM-10:30AM</th>
-                <th>10:30AM-11:30AM</th>
-                    <th>11:30AM-12:30AM</th>
-                        <th>12:30AM-1:30PM</th>
-                            <th>1:30PM-2:30PM</th>
-                                <th>2:30PM-3:30PM</th>
-                                    <th>3:30PM-4:30PM</th>
-                                     <th>4:30PM-5:30PM</th>
-    
-  </tr>
-  <tr class="oddrow">
-    <th>MONDAY</th>
-    <td></td>
-    <td></td>
-    <td rowspan=6 id="tea">  BREAK</td>
-    <td>EVS</td>
-    <td></td>
-        <td></td>
-    <td></td>
-        <td></td>
-            <td></td>
-            <td></td>
-  </tr>
-  
-  <tr class="ev">
-    <th>Tuesday</th>
-        <td colspan=2 id="coff">WT LAB</td>
-            <td>RM</td>
-    <td>AI</td>
-        <td class="ji"> Lunch Break</td>
-            <td>SE</td>
-    <td>TOC</td>
-        <td>CNS</td>
-        <td></td>
-  </tr>
-
-  <tr class="rv">
-    <th>Wednesday</th>
-        <td></td>
-    <td></td>
-        <td></td>
-    <td></td>
-            <td>TOC</td>
-    <td>AI</td>
-        <td>SE</td>
-            <td>RM</td>
-            <td></td>
-
-  </tr>
-
-  <tr class="vv">
-    <th>Thursday</th>
-    <td colspan=2 id="jj">CNS lab</td>
-            <td>TOC</td>
-    <td>SE</td>
-        <td>CNS</td>>
-            <td></td>
-    <td colspan=2 id="io">MINI Project</td>
-        <td></td>
-       
-    
-  </tr>
-
-  <tr class="ll">
-    <th>Friday</th>
-        <td></td>
-    <td>TOC</td>
-        <td>SE</td>
-            <td>CNS</td>   
-    <td class="ji"> Lunch Break</td>
-        <td>RM</td>
-            <td>AI</td>
-    <td></td>
-    <td></td>
-        
-  </tr>
-<tr class="ll">
-    <th>Staruday</th>
-    <td></td>
-    <td></td>
-    <td colspan=2 id="io">  MINI Project</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-</tr>
-
-</table>
-
-    </body>
+    <table>
+        <tr>
+            <th>TIME<br>DAYS</th><th>8.00<br>-<br>9.00</th><th>9.00<br>-<br>10.00</th><th>10.00<br>-<br>10.30</th><th>10.30<br>-<br>11.30</th><th>11.30<br>-<br>12.30</th><th>12.30<br>-<br>1.30</th><th>1.30<br>-<br>2.30</th><th>2.30<br>-<br>3.30</th><th>3.30<br>-<br>4.30</th><th>4.30<br>-<br>5.30</th>
+        </tr>
+        <tr class="mon"><td rowspan="3">MON</td><td></td><td></td><td rowspan="18" class="break">TEA BREAK</td><td>Online</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr class="mon"><td></td><td></td><td>EVS</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr class="mon"><td></td><td></td><td>CHS</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr class="tue"><td rowspan="3">TUE</td><td colspan="2">WT Lab / CNS Lab</td><td>RM</td><td>AI</td><td></td><td>SE</td><td>TOC</td><td>CNS</td><td></td></tr>
+        <tr class="tue"><td>D3+D4</td><td>D1+D2</td><td>MNS</td><td>SL</td><td></td><td>GR</td><td>NT</td><td>GHS</td><td></td></tr>
+        <tr class="tue"><td>503</td><td>502/518</td><td>519</td><td>519</td><td></td><td>511</td><td>511</td><td>511</td><td></td></tr>
+        <tr class="wed"><td rowspan="3">WED</td><td></td><td></td><td></td><td></td><td>TOC</td><td>AI</td><td>SE</td><td>RM</td><td></td></tr>
+        <tr class="wed"><td></td><td></td><td></td><td></td><td>NT</td><td>SL</td><td>GR</td><td>MNS</td><td></td></tr>
+        <tr class="wed"><td></td><td></td><td></td><td></td><td>521</td><td>521</td><td>521</td><td>521</td><td></td></tr>
+        <tr class="thur"><td rowspan="3">THUR</td><td colspan="2">WT Lab / CNS Lab</td><td>TOC</td><td>SE</td><td>CNS</td><td></td><td colspan="2" class="mini_proj">MINI PROJECT</td><td></td></tr>
+        <tr class="thur"><td>D1+D2</td><td>D3+D4</td><td>NT</td><td>GR</td><td>GHS</td><td></td><td colspan="2" class="mini_proj">Nethravathy & Chaitra</td><td></td></tr>
+        <tr class="thur"><td>503</td><td>527A</td><td>525</td><td>525</td><td>525</td><td></td><td colspan="2" class="mini_proj">519</td><td></td></tr>
+        <tr class="fri"><td rowspan="3">FRI</td><td>YOGA</td><td>TOC</td><td>SE</td><td>CNS</td><td></td><td>RM</td><td>AI</td><td></td><td></td></tr>
+        <tr class="fri"><td></td><td>NT</td><td>GR</td><td>GHS</td><td></td><td>MNS</td><td>SL</td><td></td><td></td></tr>
+        <tr class="fri"><td></td><td>517</td><td>517</td><td>517</td><td></td><td>521</td><td>521</td><td></td><td></td></tr>
+        <tr class="sat"><td rowspan="3">SAT</td><td></td><td></td><td colspan="2">MINI PROJECT</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr class="sat"><td></td><td></td><td colspan="2">Nethravathy & Chaitra</td><td></td><td></td><td></td><td></td><td></td></tr>
+        <tr class="sat"><td></td><td></td><td colspan="2">519</td><td></td><td></td><td></td><td></td><td></td></tr>
+    </table>
+    <table class="subject-table"></table>
+</body>
 </html>
